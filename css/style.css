@@ -1,0 +1,118 @@
+#navbar {
+  background-color:hwb(207 89% 8%);
+}
+
+#navbar ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+}
+
+#navbar ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Tilt Neon', sans-serif;
+}
+
+#navbar ul li a {
+  color: white;
+  background-color: #a2a3b1;
+  display: block;
+  border-radius: 0.8em;
+  text-decoration: none;
+  padding: 1em;
+  margin: 1em;
+  
+}
+
+#navbar ul li a:hover {
+  box-shadow: 0.5em 0.6em gray;
+}
+
+h1, h2, h3 {
+  font-family: 'Tilt Neon', sans-serif;
+  
+}
+
+p {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.list {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  width: 25%;
+  float: left;
+  margin-right: 1em;
+}
+
+.cleared-float {
+  clear: both;
+}
+
+.movie {
+  overflow: hidden;
+  padding: 1.1em;
+  margin-bottom: 1.3em;
+  background-color: bisque;
+  border-radius: 1em;
+}
+
+#poppy-bg {
+  background-image: url('../images/poppy_hill_bg.jpg');
+}
+
+#whisper-bg {
+  background-image: url('../images/whisper_of_heart_bg.jpg');
+  background-size: 125%;
+}
+
+#wind-bg{
+  background-image: url('../images/wind_rises_bg.jpg');
+  background-size: 110%;
+}
+
+#lighter-text {
+  color: white;
+}
+
+.page-content {
+  margin: 1.3em;
+}
+
+.reg-header {
+  background-color:rgb(250, 229, 246);
+  width: fit-content;
+  padding: 0.3em;
+  border-radius: 0.35em;
+}
+
+#bookbodydiv {
+  display:flex;
+  justify-content: center;
+}
+
+.book-div {
+  width:min-content;
+  display: inline-block;
+  text-align: center;
+  margin: 2em;
+}
+
+.book-img {
+  width: 20em;
+  height: 27em;
+  margin-bottom: 1em;
+
+}
+
+#fixed-width{
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+}
