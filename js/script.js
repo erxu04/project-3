@@ -10,6 +10,8 @@
 // }
 
 // initMap();
+const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let labelIndex = 0;
 
 let map;
 
@@ -23,10 +25,66 @@ async function initMap() {
   });
 
   
-  new google.maps.Marker({
+  marker = new google.maps.Marker({
     position: myLoc,
     map,
-    title: "Hello World!",
+    icon: "images/flower.png",
+    draggable: true,
+    animation: google.maps.Animation.BOUNCE,
+    title: "Drag me!"
+  });
+
+
+  const contentString = "A great year-round place for nature lovers!";
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+    });
+  });
+
+
+  // This event listener calls addMarker() when the map is clicked.
+  google.maps.event.addListener(map, "click", (event) => {
+    addMarker(event.latLng, map);
+  });
+
+  //42.14861801952385, -87.79218803150572
+  const favorites = [
+    {
+      position: new google.maps.LatLng(42.14757688671578, -87.78888204394036),
+    },
+    {
+      position: new google.maps.LatLng(42.147522524525755, -87.78748892983616),
+    },
+    {
+      position: new google.maps.LatLng(42.14861801952385, -87.79218803150572),
+    },
+  ]
+
+  for(let i = 0; i < favorites.length; i++)
+  {
+    const marker = new google.maps.Marker({
+      position: favorites[i].position,
+      icon: "images/star.png",
+      map: map,
+    });
+  }
+  
+}
+
+// Adds a marker to the map. OUTSIDE initMap() FUNCTION, CALLED FROM WITHIN
+function addMarker(location, map) {
+  // Add the marker at the clicked location, and add the next-available label
+  // from the array of alphabetical characters.
+  new google.maps.Marker({
+    position: location,
+    label: labels[labelIndex++ % labels.length],
+    map: map,
+    animation: google.maps.Animation.DROP,
   });
 }
 
