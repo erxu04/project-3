@@ -116,3 +116,17 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+#sec-map{
+  height: 500px;
+  width:auto;
+  margin: 5% 15%;
+  background-color: rgb(227, 219, 226);
+}
+
+#map{
+  height: 400px;
+  width: 75%;
+  margin: 0 auto;
+}
+
