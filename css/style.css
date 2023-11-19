@@ -132,9 +132,13 @@ img {
 
 @media screen and (min-width: 0px) and (max-width: 700px){
   .page-content{
-    margin: 0;
+    margin: 0.5em;
+    
+  }
+
+  body {
     background-image: url('../images/media_query_bg.jpg');
-    /* background-size: 95%; */
+    background-size: 100%;
   }
 
   #navbar{
@@ -153,6 +157,10 @@ img {
 
   p {
     font-size: larger;
+  }
+
+  .reg-header{
+    background-color: rgb(172, 159, 150);
   }
   
 }
